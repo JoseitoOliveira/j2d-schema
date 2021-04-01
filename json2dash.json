@@ -1,0 +1,385 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema",
+    "type": "object",
+    "default": {
+        "layout": {}
+    },
+    "required": [
+        "layout"
+    ],
+    "definitions": {
+        "component": {
+            "$id": "#/definitions/component",
+            "title": "component",
+            "description": "component",
+            "properties": {
+                "className": {
+                    "type": "string",
+                    "description": "Classe CSS utilizada"
+                },
+                "type": {
+                    "type": "string",
+                    "default": "data_table"
+                },
+                "id": {
+                    "type": "string"
+                }
+            }
+        },
+        "data_table": {
+            "$id": "#/definitions/data_table",
+            "title": "Data_table",
+            "description": "Data_Table",
+            "default": {
+                "type": "data_table",
+                "id": "",
+                "className": "",
+                "text": "",
+                "file_path": "<path>",
+                "encoding": "utf-8",
+                "usecols": [],
+                "index_col": "",
+                "page_size": 10,
+                "style_as_list_view": "False",
+                "style_inner": {}
+            },
+            "required": [
+                "file_path"
+            ],
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                },
+                "text": {
+                    "type": "string",
+                    "default": "",
+                    "description": "Texto que aparece acima da tabela."
+                },
+                "file_path": {
+                    "type": "string",
+                    "description": "Caminho do arquivo (csv)."
+                },
+                "encoding": {
+                    "type": "string",
+                    "default": "utf-8",
+                    "description": "Encoding utilizado para ler 'file_path'."
+                },
+                "usecols": {
+                    "type": "array",
+                    "default": [],
+                    "description": "Lista de nomes de colunas a serem lidas."
+                },
+                "index_col": {
+                    "type": "string",
+                    "description": "Nome da coluna que deve ser adotada como index."
+                },
+                "page_size": {
+                    "type": "integer",
+                    "default": 10,
+                    "description": "Número de linhas com dado em cada página."
+                },
+                "style_as_list_view": {
+                    "$comment": "O tipo deveria ser booleano, mas a analise no código python parece funcionar de forma diferente. Verificar",
+                    "type": "string",
+                    "default": "False",
+                    "description": "Flag que habilita a vizualização sem bordas verticais."
+                },
+                "style_inner": {
+                    "type": "object",
+                    "default": {},
+                    "description": " Dicionário com vários dicionários usados para 'estilizar' o interior do componente."
+                }
+            }
+        },
+        "dropdown": {
+            "$id": "#/definitions/dropdown",
+            "default": {
+                "type": "dropdown",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "exploratory": {
+            "$id": "#/definitions/exploratory",
+            "default": {
+                "type": "exploratory",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "graph": {
+            "$id": "#/definitions/graph",
+            "default": {
+                "type": "graph",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "img": {
+            "$id": "#/definitions/img",
+            "default": {
+                "type": "img",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "map": {
+            "$id": "#/definitions/map",
+            "default": {
+                "type": "map",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "markdown": {
+            "$id": "#/definitions/markdown",
+            "default": {
+                "type": "markdown",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "upload": {
+            "$id": "#/definitions/upload",
+            "default": {
+                "type": "upload",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "dashboard_links": {
+            "$id": "#/definitions/dashboard_links",
+            "default": {
+                "type": "dashboard_links",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "products": {
+            "$id": "#/definitions/products",
+            "default": {
+                "type": "products",
+                "id": "",
+                "className": ""
+            },
+            "properties": {
+                "className": {
+                    "$ref": "#/definitions/component/properties/className"
+                },
+                "type": {
+                    "$ref": "#/definitions/component/properties/type"
+                },
+                "id": {
+                    "$ref": "#/definitions/component/properties/id"
+                }
+            }
+        },
+        "rows": {
+            "$id": "#/definitions/columns",
+            "type": "object",
+            "default": {},
+            "properties": {
+                "columns": {
+                    "$ref": "#/definitions/columns"
+                }
+            },
+            "additionalProperties": {
+                "anyOf": [
+                    {
+                        "allOf": [
+                            {
+                                "$ref": "#/definitions/component"
+                            },
+                            {
+                                "$ref": "#/definitions/data_table"
+                            }
+                        ]
+                    },
+                    {
+                        "$ref": "#/definitions/dropdown"
+                    },
+                    {
+                        "$ref": "#/definitions/exploratory"
+                    },
+                    {
+                        "$ref": "#/definitions/graph"
+                    },
+                    {
+                        "$ref": "#/definitions/img"
+                    },
+                    {
+                        "$ref": "#/definitions/map"
+                    },
+                    {
+                        "$ref": "#/definitions/markdown"
+                    },
+                    {
+                        "$ref": "#/definitions/products"
+                    },
+                    {
+                        "$ref": "#/definitions/upload"
+                    },
+                    {
+                        "$ref": "#/definitions/dashboard_links"
+                    }
+                ]
+            }
+        },
+        "columns": {
+            "$id": "#/definitions/columns",
+            "type": "object",
+            "default": {},
+            "properties": {
+                "rows": {
+                    "$ref": "#/definitions/rows"
+                }
+            },
+            "additionalProperties": {
+                "anyOf": [
+                    {
+                        "$ref": "#/definitions/data_table"
+                    },
+                    {
+                        "$ref": "#/definitions/dropdown"
+                    },
+                    {
+                        "$ref": "#/definitions/exploratory"
+                    },
+                    {
+                        "$ref": "#/definitions/graph"
+                    },
+                    {
+                        "$ref": "#/definitions/img"
+                    },
+                    {
+                        "$ref": "#/definitions/map"
+                    },
+                    {
+                        "$ref": "#/definitions/markdown"
+                    },
+                    {
+                        "$ref": "#/definitions/products"
+                    },
+                    {
+                        "$ref": "#/definitions/upload"
+                    },
+                    {
+                        "$ref": "#/definitions/dashboard_links"
+                    }
+                ]
+            }
+        }
+    },
+    "properties": {
+        "layout": {
+            "$id": "#/layout",
+            "type": "object",
+            "title": "The layout schema",
+            "description": "",
+            "default": {},
+            "properties": {
+                "rows": {
+                    "$ref": "#/definitions/rows"
+                },
+                "columns": {
+                    "$ref": "#/definitions/columns"
+                }
+            }
+        },
+        "additionalProperties": true
+    }
+}
