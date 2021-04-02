@@ -54,7 +54,10 @@
                 "usecols": {
                     "type": "array",
                     "default": [],
-                    "description": "Lista de nomes de colunas a serem lidas."
+                    "description": "Lista de nomes de colunas a serem lidas.",
+                    "items": {
+                        "type": "string"
+                    }
                 },
                 "index_col": {
                     "type": "string",
