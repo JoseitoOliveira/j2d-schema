@@ -584,6 +584,28 @@
         }
     },
     "properties": {
+        "callback": {
+            "$id": "#/properties/callback",
+            "type": "object",
+            "default": {
+                "name_module": "",
+                "file_path": ""
+            },
+            "required": [
+                "name_module",
+                "file_path"
+            ],
+            "properties": {
+                "name_module": {
+                    "type": "string",
+                    "default": ""
+                },
+                "file_path": {
+                    "type": "string",
+                    "default": ""
+                }
+            }
+        },
         "layout": {
             "$id": "#/properties/layout",
             "type": "object",
@@ -597,27 +619,6 @@
             "properties": {
                 "className": {
                     "$ref": "#/definitions/className"
-                },
-                "callback": {
-                    "type": "object",
-                    "default": {
-                        "name_module": "",
-                        "file_path": ""
-                    },
-                    "required": [
-                        "name_module",
-                        "file_path"
-                    ],
-                    "properties": {
-                        "name_module": {
-                            "type": "string",
-                            "default": ""
-                        },
-                        "file_path": {
-                            "type": "string",
-                            "default": ""
-                        }
-                    }
                 },
                 "rows": {
                     "$ref": "#/definitions/rows"
