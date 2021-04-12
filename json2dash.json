@@ -28,7 +28,8 @@
                 "style_inner": {}
             },
             "required": [
-                "file_path"
+                "file_path",
+                "id"
             ],
             "properties": {
                 "type": {
@@ -185,6 +186,9 @@
                 "id": "",
                 "className": ""
             },
+            "required": [
+                "id"
+            ],
             "properties": {
                 "className": {
                     "$ref": "#/definitions/className"
@@ -273,6 +277,9 @@
         "img": {
             "$id": "#/definitions/img",
             "type": "object",
+            "required": [
+                "id"
+            ],
             "default": {
                 "type": "img",
                 "id": "",
@@ -391,6 +398,9 @@
         "upload": {
             "$id": "#/definitions/upload",
             "type": "object",
+            "required": [
+                "id"
+            ],
             "default": {
                 "type": "upload",
                 "id": "",
@@ -488,6 +498,9 @@
         "products": {
             "$id": "#/definitions/products",
             "type": "object",
+            "required": [
+                "id"
+            ],
             "default": {
                 "type": "products",
                 "id": "",
