@@ -530,7 +530,8 @@
         },
         "id": {
             "$id": "#/definitions/id",
-            "type": "string"
+            "type": "string",
+            "description": "Id do componente"
         },
         "row": {
             "$id": "#/definitions/row",
