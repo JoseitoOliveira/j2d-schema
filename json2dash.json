@@ -28,6 +28,7 @@
                 "style_inner": {}
             },
             "required": [
+                "type",
                 "file_path",
                 "id"
             ],
@@ -86,6 +87,7 @@
             "$id": "#/definitions/dropdown",
             "type": "object",
             "required": [
+                "type",
                 "id",
                 "options"
             ],
@@ -187,6 +189,7 @@
                 "className": ""
             },
             "required": [
+                "type",
                 "id"
             ],
             "properties": {
@@ -206,6 +209,7 @@
             "type": "object",
             "description": "Cria a div com um graph a partir de um dicionário de parâmetros.",
             "required": [
+                "type",
                 "file_path",
                 "id",
                 "data"
@@ -278,6 +282,7 @@
             "$id": "#/definitions/img",
             "type": "object",
             "required": [
+                "type",
                 "id"
             ],
             "default": {
@@ -332,6 +337,7 @@
                 "layers": {}
             },
             "required": [
+                "type",
                 "id"
             ],
             "properties": {
@@ -371,6 +377,7 @@
                 "text": ""
             },
             "required": [
+                "type",
                 "text",
                 "id"
             ],
@@ -399,6 +406,7 @@
             "$id": "#/definitions/upload",
             "type": "object",
             "required": [
+                "type",
                 "id"
             ],
             "default": {
@@ -434,6 +442,7 @@
             "$id": "#/definitions/dashboard_links",
             "type": "object",
             "required": [
+                "type",
                 "id"
             ],
             "default": {
@@ -499,6 +508,7 @@
             "$id": "#/definitions/products",
             "type": "object",
             "required": [
+                "type",
                 "id"
             ],
             "default": {
