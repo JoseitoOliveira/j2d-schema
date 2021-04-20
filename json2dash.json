@@ -253,7 +253,8 @@
             ],
             "properties": {
                 "graph": {
-                    "$ref": "#/definitions/type"
+                    "$ref": "#/definitions/type",
+                    "markdownDescription": "## Graph\n\n- **id**: tipo(str), obrigatório\n[Identificador único do componente.]\n\n- **dashboards**: tipo(list), opcional - padrão([])\n\n        Uma lista com dicionários, em que cada dicionário descreve\n        uma dashboard:\n\n        'name' - Nome da dashboard, o qual é usado para \n                identificá-la dentro do programa e também para \n                roteamento;\n        'fancy_name' - Nome bonito ou elegante, usado para \n                criar links ou botões para a dashboard;\n        'filename' - Caminho até o arquivo json ou py em que \n                está o layout e callbacks;\n        'keys' - Lista com duas palavras chave usadas na \n                organização das dashboards em 2 níveis; e\n        'enable' - Se enable é diferente de 'yes', o dashboard \n                é ignorado e para todos os efeitos é como se ele não \n                existisse no arquivo de entrada.\n\n\n- **link_type**: tipo(str), opcional - padrão('links')\n[Opção pelo tipo de direcionamento: links ou buttons.]\n\n- **className_inner**: tipo(str), opcional - padrão('dashboard_links_style')\n[Classe css usada no component.]"
                 },
                 "data_table": false,
                 "dropdown": false,
@@ -319,7 +320,8 @@
             ],
             "properties": {
                 "img": {
-                    "$ref": "#/definitions/type"
+                    "$ref": "#/definitions/type",
+                    "markdownDescription": "## Img\n\n- **id**: tipo(str), obrigatório\n[Identificador único da imagem.]\n\n- **className_inner**: tipo(str), opcional - padrão('img_style')\n[Classe css usada no component.]\n\n- **text**: tipo(str), opcional - padrão('')\n[Texto que aparece acima da imagem.]\n\n- **file_path**: tipo(str), obrigatório\n[Caminho para o arquivo da imagem.],\n\n- **alt**: tipo(str), opcional - padrão('')\n[Texto descritivo do conteúdo da imagem.Serve para dar acessibilidade e facilitar webscrapping.]"
                 },
                 "data_table": false,
                 "dropdown": false,
@@ -359,7 +361,8 @@
             ],
             "properties": {
                 "map": {
-                    "$ref": "#/definitions/type"
+                    "$ref": "#/definitions/type",
+                    "markdownDescription": "## Map\n\n\n- **id**: tipo(str), obrigatório\n[Identificador único.]\n\n- **className_inner**: tipo(str), opcional - padrão('map_style')\n[Classe css usada no component.]\n\n- **title**: tipo(str), opcional - padrão(**)\n[Se for fornecido, é incluído como título no topo da div.],\n\n- **base**: tipo(dict), opcional - padrão({})\n[Parâmetros necessários para desenhar o mapa base. Ver create_map_base.]\n\n- **layers**: tipo(dict), opcional - padrão({}})\n[Parâmetros necessários para desenhar camadas sobre o mapa base. Ver create_data_layers.]"
                 },
                 "data_table": false,
                 "dropdown": false,
@@ -408,7 +411,8 @@
             ],
             "properties": {
                 "markdown": {
-                    "$ref": "#/definitions/type"
+                    "$ref": "#/definitions/type",
+                    "markdownDescription": "## Markdown\n\n\n- **id**: tipo(str), obrigatório\n[Identificador único do componente texto.]\n\n- **className_inner**: tipo(str), opcional - padrão('markdown_style')\n[Classe css usada no component.]\n\n- **text**: tipo(str), obrigatório\n[Texto incluído na div.]"
                 },
                 "data_table": false,
                 "dropdown": false,
@@ -442,7 +446,8 @@
             ],
             "properties": {
                 "upload": {
-                    "$ref": "#/definitions/type"
+                    "$ref": "#/definitions/type",
+                    "markdownDescription": "## Upload\n\n\n- **id**: tipo(str), obrigatório,\n\n- **className_inner**: tipo(str), opcional - padrão('upload_style')\n\n- **text**: tipo(str), opcional - padrão('Informe o arquivo...')\n\n- **multiple**: tipo(str), opcional - padrão('False')"
                 },
                 "data_table": false,
                 "dropdown": false,
@@ -561,7 +566,8 @@
             ],
             "properties": {
                 "products": {
-                    "$ref": "#/definitions/type"
+                    "$ref": "#/definitions/type",
+                    "markdownDescription": "## Products\n\n- **id**: tipo(str), obrigatório,\n[Identificador único do componente.]\n\n- **className_img_inner**: tipo(str), opcional - padrão('product_img_style')\n[Classe css usada no component interno: img.]\n\n- **className_markdown_inner**: tipo(str), opcional - padrão('product_markdown_style')\n[Classe css usada no component interno: markdown.]\n\n- **file_path**: tipo(str), obrigatório,\n[Caminho para o arquivo csv de produtos.]\n\n- **encoding**: tipo(str), opcional - padrão(utf-8),\n- [Encoding utilizado para ler 'file_path'.]\n\n- **usecols**: tipo(list(str)), opcional - padrão(todas),\n[Lista de nomes de colunas a serem lidas.]\n\n- **index_col**: tipo(str), opcional - Padrão(None),\n[Nome da coluna que deve ser adotada como index.]\n\n- **filter**: tipo(str ou lista de str), opcional, padrão([])\n[\n        Uma query ou uma lista de query que permite filtrar \n        registros do arquivo de entrada.\n]\n\n- **sort_values**: tipo(list), opcional, padrão([])\n[\n        Lista com nomes de colunas para serem usadas na ordenação \n        dos registros do arquivo de entrada. \n        Atualmente, não tem como escolher a ordem: ascending=False.\n]"
                 },
                 "data_table": false,
                 "dropdown": false,
